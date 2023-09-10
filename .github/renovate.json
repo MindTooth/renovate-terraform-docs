@@ -10,7 +10,7 @@
     "regexManagers:githubActionsVersions"
   ],
 
-  "enabledManagers": ["dockerfile", "regex"],
+  "enabledManagers": ["regex"],
 
   "packageRules": [
     {
