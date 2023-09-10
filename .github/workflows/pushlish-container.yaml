@@ -30,7 +30,7 @@ jobs:
         uses: docker/metadata-action@v4
         with:
           images: |
-            ghcr.io/${{ github.repository.owner }}/renovate
+            ghcr.io/${{ github.repository_owner }}/renovate
           tags: |
             type=ref,event=branch
             type=ref,event=pr
