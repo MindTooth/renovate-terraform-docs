@@ -5,15 +5,17 @@
     "config:recommended",
     ":label(dependencies)",
     ":timezone(Europe/Berlin)",
-    ":disableRateLimiting"
+    ":disableRateLimiting",
+    "regexManagers:dockerfileVersions",
+    "regexManagers:githubActionsVersions"
   ],
 
-  "enabledManagers": ["dockerfile"],
+  "enabledManagers": ["dockerfile", "regex"],
 
   "packageRules": [
     {
       "matchPackageNames": ["renovate/renovate"],
-      "extends": ["schedule:automergeDaily"]
+      "extends": ["schedule:automergeDaily", ":automergeAll"]
     }
   ]
 }

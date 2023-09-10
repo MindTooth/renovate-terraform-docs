@@ -1,4 +1,6 @@
-FROM renovate/renovate:36.40.4
+# renovate datasource=docker depName=renovate/renovate
+ARG RENOVATE_VERSION=36.40.4
+FROM renovate/renovate:${RENOVATE_VERSION}
 
 # Hijack image
 WORKDIR /tmp
