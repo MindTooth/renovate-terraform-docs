@@ -15,7 +15,7 @@ on:
       - "master"
 
 env:
-  # renovate datasource=docker depName=renovate/renovate
+  # renovate: datasource=docker depName=renovate/renovate
   RENOVATE_VERSION: 36.40.4
 
 jobs:
@@ -35,6 +35,8 @@ jobs:
         with:
           images: |
             ghcr.io/${{ github.repository }}/renovate
+          labels: |
+            org.opencontainers.image.version=${{ RENOVATE_VERSION }}
           tags: |
             type=ref,event=branch
             type=ref,event=pr

@@ -1,4 +1,4 @@
-# renovate datasource=docker depName=renovate/renovate
+# renovate: datasource=docker depName=renovate/renovate
 ARG RENOVATE_VERSION=36.40.4
 FROM renovate/renovate:${RENOVATE_VERSION}
 
