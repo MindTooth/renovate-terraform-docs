@@ -36,7 +36,7 @@ jobs:
           images: |
             ghcr.io/${{ github.repository }}/renovate
           labels: |
-            org.opencontainers.image.version=${{ RENOVATE_VERSION }}
+            org.opencontainers.image.version=${{ env.RENOVATE_VERSION }}
           tags: |
             type=ref,event=branch
             type=ref,event=pr
