@@ -10,12 +10,21 @@
     "regexManagers:githubActionsVersions"
   ],
 
-  "enabledManagers": ["regex"],
+  "enabledManagers": ["regex", "terraform"],
 
   "packageRules": [
     {
       "matchPackageNames": ["renovate/renovate"],
       "extends": ["schedule:automergeDaily", ":automergeAll"]
+    },
+
+    {
+      "matchManagers": ["terraform"],
+      "postUpgradeTasks": {
+        "commands": ["tslint --fix"],
+        "fileFilters": ["yarn.lock", "**/*.js"],
+        "executionMode": "update"
+      }
     }
   ]
 }
