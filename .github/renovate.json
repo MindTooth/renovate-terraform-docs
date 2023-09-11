@@ -24,6 +24,7 @@
         "commands": [
           "terraform-docs markdown table --output-file README.md --hide-empty ."
         ],
+        "fileFilters": ["**/*"],
         "executionMode": "update"
       }
     }
