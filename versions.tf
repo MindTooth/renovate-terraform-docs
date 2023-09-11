@@ -4,7 +4,7 @@ terraform {
   required_providers {
     dns = {
       source  = "hashicorp/dns"
-      version = "2.2.0"
+      version = "3.3.2"
     }
     openstack = {
       source  = "terraform-provider-openstack/openstack"
