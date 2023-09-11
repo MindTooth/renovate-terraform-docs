@@ -16,7 +16,7 @@ on:
 
 env:
   # renovate: datasource=docker depName=renovate/renovate
-  RENOVATE_VERSION: 36.40.4
+  RENOVATE_VERSION: 36.91.0
 
 jobs:
   build:
