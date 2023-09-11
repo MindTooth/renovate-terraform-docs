@@ -21,8 +21,9 @@
     {
       "matchManagers": ["terraform"],
       "postUpgradeTasks": {
-        "commands": ["tslint --fix"],
-        "fileFilters": ["yarn.lock", "**/*.js"],
+        "commands": [
+          "terraform-docs markdown table --output-file README.md --hide-empty ."
+        ],
         "executionMode": "update"
       }
     }
